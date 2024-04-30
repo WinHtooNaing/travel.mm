@@ -4,10 +4,6 @@ include 'header.php'
 
 <?php
 
-
-
-
-
 if (empty($_POST['search']) && empty($_COOKIE['search'])) {
   $stmt = $pdo->prepare("SELECT * FROM region ORDER BY id DESC");
   $stmt->execute();

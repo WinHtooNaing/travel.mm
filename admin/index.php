@@ -76,7 +76,7 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon purple">
-            <i class="lni lni-cart-full"></i>
+            <i class="lni lni-package"></i>
           </div>
           <div class="content">
             <h6 class="mb-10">Total Your Post</h6>
@@ -99,7 +99,7 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon success">
-            <i class="lni lni-dollar"></i>
+            <i class="lni lni-popup"></i>
           </div>
           <div class="content">
             <h6 class="mb-10">Total User Posts</h6>

@@ -105,7 +105,7 @@
                     $email = $_POST['email'];
                     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                    $file = '../user_image/' . ($_FILES['image']['name']);
+                    $file = 'user_image/' . ($_FILES['image']['name']);
                     $imageType = pathinfo($file, PATHINFO_EXTENSION);
 
                     if ($imageType != 'png' && $imageType != 'jpg' && $imageType != 'jpeg') {

@@ -7,7 +7,7 @@ $result = $stmt->fetchAll();
 ?>
 
 <div style="width:100%;height:600px">
-    <img src="about_image/group.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+    <img src="about_image/logo.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
 <h1 style="position: relative;top:-50%;color:white;font-size:5rem;text-align:center;font-family:fantasy">Travel To Myanmar</h1>
 </div>
 <h1 style="padding-top:70px;text-align:center">Related Posts</h1>

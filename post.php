@@ -5,7 +5,7 @@ include 'header.php';
 <?php
 
 if (empty($_POST['search']) && empty($_COOKIE['search'])) {
-   $stmt = $pdo->prepare("SELECT * FROM posts");
+   $stmt = $pdo->prepare("SELECT * FROM posts ORDER BY id DESC");
    $stmt->execute();
    $result = $stmt->fetchAll();
 } else {

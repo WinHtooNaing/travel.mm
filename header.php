@@ -46,7 +46,7 @@ $page = end($link_array);
         ul li {
             display: flex;
             flex-direction: row;
-            margin-right: 10%;
+            margin-right: 5%;
 
         }
         ul li a:hover{
@@ -67,6 +67,9 @@ $page = end($link_array);
         }
         ul li a{
             display: flex;
+        }
+        .photo-image:hover{
+           transition: ease-in-out 2s;
         }
     </style>
 
@@ -97,6 +100,9 @@ $page = end($link_array);
                     </li>
                     <li class="trigger Free">
                         <a href="contact.php" class="<?php echo $page == 'contact.php' ? 'active' : '' ?>"><i class="lni lni-tag"></i><span>Contact</span></a>
+                    </li>
+                    <li class="trigger Free">
+                        <a href="photo.php" class="<?php echo $page == 'photo.php' ? 'active' : '' ?>"><i class="lni lni-image"></i><span>Photo</span></a>
                     </li>
                     <li class="trigger Free">
                         <?php if (empty($_SESSION['logged_in']) && empty($_SESSION['username'])) { ?>
