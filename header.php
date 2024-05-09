@@ -49,27 +49,31 @@ $page = end($link_array);
             margin-right: 5%;
 
         }
-        ul li a:hover{
+
+        ul li a:hover {
             background: #365CF5;
-            color:#fff;
-            padding:10px;
+            color: #fff;
+            padding: 10px;
             border-radius: 5px;
         }
-        ul li .active{
+
+        ul li .active {
             background: #365CF5;
-            color:#fff;
-            padding:10px;
+            color: #fff;
+            padding: 10px;
             border-radius: 5px;
         }
 
         ul li i {
             padding-right: 10px;
         }
-        ul li a{
+
+        ul li a {
             display: flex;
         }
-        .photo-image:hover{
-           transition: ease-in-out 2s;
+
+        .photo-image:hover {
+            transition: ease-in-out 2s;
         }
     </style>
 
@@ -77,14 +81,14 @@ $page = end($link_array);
 
 <body>
 
-    <div class="row" >
+    <div class="row">
         <div class="col-12">
             <div class="card-style" style="display:flex;justify-content:space-between;width:100%;padding:20px 10% 20px 10%;">
                 <div class="header-left d-flex align-items-center">
                     <div class="navbar-logo">
-                        <a href="index.php" >
+                        <a href="index.php">
                             <!-- <img src="assets/images/logo/logo.svg" alt="logo" /> -->
-                            <h2 style="font-size:2rem;font-family:monospace;padding:10px 0;color:#365CF5;">Travel.mm</h2>
+                            <h2 style="font-size:2rem;font-family:fantasy;padding:10px 0;color:#365CF5;">Travel.mm</h2>
                         </a>
                     </div>
                 </div>
@@ -99,6 +103,7 @@ $page = end($link_array);
                         <a href="about.php" class="<?php echo $page == 'about.php' ? 'active' : '' ?>"><i class="lni lni-wallet"></i><span>About</span></a>
                     </li>
                     <li class="trigger Free">
+
                         <a href="contact.php" class="<?php echo $page == 'contact.php' ? 'active' : '' ?>"><i class="lni lni-tag"></i><span>Contact</span></a>
                     </li>
                     <li class="trigger Free">
@@ -111,6 +116,7 @@ $page = end($link_array);
                             <a href="login.php"><i class="lni lni-enter"></i><span>Login</span></a>
 
 
+
                         <?php } else { ?>
                             <div class="header" style="padding:0">
                                 <div class="header-right">
@@ -120,7 +126,7 @@ $page = end($link_array);
                                             <div class="profile-info">
                                                 <div class="info">
                                                     <div class="image">
-                                                        <img src="user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height: 100%;object-fit:cover" />
+                                                        <img src="admin/assets/images/user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height: 100%;object-fit:cover" />
                                                     </div>
                                                     <div>
                                                         <h6 class="fw-500" style="color:#365CF5;"><?php echo $_SESSION['username'] ?></h6>
@@ -133,7 +139,7 @@ $page = end($link_array);
                                             <li>
                                                 <div class="author-info flex items-center !p-1">
                                                     <div class="image">
-                                                        <img src="user_image/<?php echo $_SESSION['image'] ?>" alt="image">
+                                                        <img src="admin/assets/images/user_image/<?php echo $_SESSION['image'] ?>" alt="image">
                                                     </div>
                                                     <div class="content">
                                                         <h4 class="text-sm"><?php echo $_SESSION['username'] ?></h4>

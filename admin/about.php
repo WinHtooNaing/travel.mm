@@ -57,9 +57,9 @@ include 'header.php';
                     $id = 1;
                     $description = $_POST['description'];
 
-                    $file1 = '../about_image/' . ($_FILES['image1']['name']);
+                    $file1 = 'assets/images/about_image/' . ($_FILES['image1']['name']);
                     $imageType1 = pathinfo($file1, PATHINFO_EXTENSION);
-                    $file2 = '../about_image/' . ($_FILES['image2']['name']);
+                    $file2 = 'assets/images/about_image/' . ($_FILES['image2']['name']);
                     $imageType2 = pathinfo($file2, PATHINFO_EXTENSION);
 
                     if ($imageType1 != 'png' && $imageType1 != 'jpg' && $imageType1 != 'jpeg' &&

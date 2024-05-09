@@ -4,15 +4,41 @@ include 'header.php';
 
 <?php
 
-if (empty($_POST['search']) && empty($_COOKIE['search'])) {
-   $stmt = $pdo->prepare("SELECT * FROM posts ORDER BY id DESC");
-   $stmt->execute();
-   $result = $stmt->fetchAll();
+if (!empty($_GET['pageno'])) {
+  $pageno = $_GET['pageno'];
 } else {
-   $searchKey = $_POST['search'] ? $_POST['search'] : $_COOKIE['search'];
-   $stmt = $pdo->prepare("SELECT * FROM posts WHERE title LIKE '%$searchKey%'  ORDER BY id DESC");
-   $stmt->execute();
-   $result = $stmt->fetchAll();
+  $pageno = 1;
+}
+$numOfrecs = 6;
+$offset = ($pageno - 1) *  $numOfrecs;
+
+if (empty($_POST['search']) && empty($_COOKIE['search'])) {
+  $stmt = $pdo->prepare("SELECT * FROM posts  ORDER BY created_at DESC");
+  $stmt->execute();
+  $rawResult = $stmt->fetchAll();
+
+  $total_pages = ceil(count($rawResult) / $numOfrecs);
+
+
+  $stmt = $pdo->prepare("SELECT * FROM posts  ORDER BY created_at DESC LIMIT $offset,$numOfrecs");
+  $stmt->execute();
+  $result = $stmt->fetchAll();
+} else {
+
+  $searchKey = isset($_POST['search']) ? $_POST['search'] : (isset($_COOKIE['search']) ? $_COOKIE['search'] : '');
+
+  // $searchKey = $_POST['search'] ? $_POST['search'] : $_COOKIE['search'] ; ရေးမရဘူး ဖြစ်နေတယ်
+  $stmt = $pdo->prepare("SELECT * FROM posts WHERE  title LIKE '%$searchKey%' ORDER BY created_at DESC");
+
+  $stmt->execute();
+  $rawResult = $stmt->fetchAll();
+
+  $total_pages = ceil(count($rawResult) / $numOfrecs);
+
+
+  $stmt = $pdo->prepare("SELECT * FROM posts WHERE  title LIKE '%$searchKey%' ORDER BY created_at DESC LIMIT $offset,$numOfrecs");
+  $stmt->execute();
+  $result = $stmt->fetchAll();
 }
 
 ?>
@@ -68,7 +94,7 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
                               $stmtUser->execute();
                               $resultUser = $stmtUser->fetchAll();
                               ?>
-                              <img src="user_image/<?php echo $resultUser[0]['image']  ?>" alt="" style="object-fit: cover;" />
+                              <img src="admin/assets/images/user_image/<?php echo $resultUser[0]['image']  ?>" alt="" style="object-fit: cover;" />
                            </div>
                            <div class="text">
                               <p class="text-sm text-medium">
@@ -108,7 +134,7 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
                         </div>
                         <div class="card-image">
                            <a href="post-detail.php?id=<?php echo $value['id'] ?>">
-                              <img src="admin/post_image/<?php echo $value['image1'] ?>" alt="" height="250px" style="object-fit: cover;" />
+                              <img src="admin/assets/images/post_image/<?php echo $value['image1'] ?>" alt="" height="250px" style="object-fit: cover;" />
                            </a>
                         </div>
                         <div class="card-content">
@@ -128,10 +154,38 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
             ?>
          </div>
          <!-- end row -->
-
+        
       </div>
       <!-- ========== cards-styles end ========== -->
+      
+             
    </div>
+   <nav aria-label="Page navigation example" style="display: flex;justify-content:end" >
+                <ul class="pagination">
+               
+                  <li class="page-item" style="margin-right:0"><a class="page-link" href="?pageno=1">First</a></li>
+                  <li class="page-item <?php if ($pageno <= 1) {
+                                          echo 'disabled';
+                                        } ?>" style="margin-right:0">
+                    <a class="page-link" href="<?php if ($pageno <= 1) {
+                                                  echo '#';
+                                                } else {
+                                                  echo "?pageno=" . ($pageno - 1);
+                                                } ?>">Previous</a>
+                  </li>
+                  <li class="page-item" style="margin-right:0"><a class="page-link" href="#"><?php echo $pageno; ?></a></li>
+                  <li class="page-item <?php if ($pageno >= $total_pages) {
+                                          echo 'disabled';
+                                        } ?>" style="margin-right:0">
+                    <a class="page-link" href="<?php if ($pageno >= $total_pages) {
+                                                  echo '#';
+                                                } else {
+                                                  echo "?pageno=" . ($pageno + 1);
+                                                } ?>">Next</a>
+                  </li>
+                  <li class="page-item" style="margin-right:0"><a class="page-link" href="?pageno=<?php echo $total_pages ?>">Last</a></li>
+                </ul>
+              </nav><br><br><br>
 </section>
 <?php
 include 'footer.php'

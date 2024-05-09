@@ -7,45 +7,45 @@ $result = $stmt->fetchAll();
 
 ?>
 <section class="card-components">
-   <div class="container-fluid">
-      <div class="title-wrapper pt-30">
-         <div class="row">
-            <div class="col-xl-12 col-lg-12">
-               <div class="card-style-4 mb-30">
-                  <!-- image header start  -->
-                  <div class="row">
-                     <div class="col-lg-10 container">
-                        <div class="row" style="margin-top:50px">
-                           <div class="col-lg-4">
-                              <img src="about_image/<?php echo $result[0]['image1'] ?>" alt="" style="width:100%;border-radius:20px;object-fit:cover;height:250px">
-                           </div>
-                           <div class="col-lg-8">
-                              <img src="about_image/<?php echo $result[0]['image2'] ?>" alt="" style="width:90%;margin-left:10%;border-radius:20px;object-fit:cover;height:300px">
-                           </div>
-                        </div>
-                     </div>
+  <div class="container-fluid">
+    <div class="title-wrapper pt-30">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12">
+          <div class="card-style-4 mb-30">
+            <!-- image header start  -->
+            <div class="row">
+              <div class="col-lg-10 container">
+                <div class="row" style="margin-top:50px">
+                  <div class="col-lg-4">
+                    <img src="admin/assets/images/about_image/<?php echo $result[0]['image1'] ?>" alt="" style="width:100%;border-radius:20px;object-fit:cover;height:250px">
                   </div>
-                  <br><br>
-                  <div class="row">
-                     <div class="col-lg-10 container">
-                        <div class="card-style-4 mb-30" style="background:#f1f5f9">
-                           <h1 style="text-align:center;margin:30px 0 30px 0">Travel.mm</h1>
-                           <p style="line-height:30px;margin-bottom:30px">
-                              <?php echo $result[0]['description'] ?>
-
-                          </p>
-                           <p><a href="about-me.php">Learn about me</a></p>
-                        </div>
-                     </div>
-
+                  <div class="col-lg-8">
+                    <img src="admin/assets/images/about_image/<?php echo $result[0]['image2'] ?>" alt="" style="width:90%;margin-left:10%;border-radius:20px;object-fit:cover;height:300px">
                   </div>
-
-
-               </div>
+                </div>
+              </div>
             </div>
-         </div>
+            <br><br>
+            <div class="row">
+              <div class="col-lg-10 container">
+                <div class="card-style-4 mb-30" style="background:#f1f5f9">
+                  <h1 style="text-align:center;margin:30px 0 30px 0">Travel.mm</h1>
+                  <p style="line-height:30px;margin-bottom:30px">
+                    <?php echo $result[0]['description'] ?>
+
+                  </p>
+                  <p><a href="about-me.php">Learn about me</a></p>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </section>
 
 <!-- <section class="card-components">

@@ -14,7 +14,7 @@ include 'header.php';
          <div class="row">
             <div class="col-lg-6">
                <div class="image" >
-                  <img src="user_image/<?php echo $result[0]['image'] ?>" alt="" style="width: 80%;height:300px;object-fit:cover;margin-left:10%;border-radius: 20px;">
+                  <img src="admin/assets/images/user_image/<?php echo $result[0]['image'] ?>" alt="" style="width: 80%;height:300px;object-fit:cover;margin-left:10%;border-radius: 20px;">
                </div>
             </div>
             <div class="col-lg-6">
@@ -26,7 +26,7 @@ include 'header.php';
                   github link ==> <a href="https://github.com/WinHtooNaing">winhtoonaing.github.io</a>
                </p>
                <div style="display: flex;margin-top:20px;float:right">
-                  <img src="user_image/<?php echo $result[0]['image'] ?>" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;margin-right:10px">
+                  <img src="admin/assets/images/user_image/<?php echo $result[0]['image'] ?>" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;margin-right:10px">
                   <p style="padding-top:5px"><?php echo $result[0]['email'] ?></p>
                </div>
                </div>

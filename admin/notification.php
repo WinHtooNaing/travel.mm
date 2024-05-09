@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 
-$stmt = $pdo->prepare("SELECT * FROM reports ORDER BY read_as ASC");
+$stmt = $pdo->prepare("SELECT * FROM reports ORDER BY read_as Asc");
 $stmt->execute();
 $result = $stmt->fetchAll();
 ?>

@@ -49,10 +49,10 @@ $resultCat = $stmtCat->fetchAll();
                                     <div class="col-lg-6">
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <img src="admin/post_image/<?php echo $value['image1'] ?>" alt="" style="width:100%;height:230px;object-fit:cover;border-radius:10px">
+                                                <img src="admin/assets/images/post_image/<?php echo $value['image1'] ?>" alt="" style="width:100%;height:230px;object-fit:cover;border-radius:10px">
                                             </div>
                                             <div class="col-lg-6">
-                                                <img src="admin/post_image/<?php echo $value['image2'] ?>" alt="" style="width:100%;height:230px;object-fit:cover;border-radius:10px">
+                                                <img src="admin/assets/images/post_image/<?php echo $value['image2'] ?>" alt="" style="width:100%;height:230px;object-fit:cover;border-radius:10px">
                                             </div>
                                         </div>
                                     </div>

@@ -39,8 +39,8 @@ $result = $stmt->fetchAll();
                 $image2ErrorColor = "1px solid red";
             };
         }else{
-            $file1 = 'post_image/'.($_FILES['image1']['name']);
-            $file2 = 'post_image/'.($_FILES['image2']['name']);
+            $file1 = 'assets/images/post_image/'.($_FILES['image1']['name']);
+            $file2 = 'assets/images/post_image/'.($_FILES['image2']['name']);
             $imageType1 = pathinfo($file1,PATHINFO_EXTENSION);
             $imageType2 = pathinfo($file2,PATHINFO_EXTENSION);
             if($imageType1 != 'png' && $imageType1 != 'jpg' && $imageType1 != 'jpeg' && 

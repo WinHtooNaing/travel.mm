@@ -52,8 +52,8 @@ if ($_POST) {
         $description1 = $_POST['description1'];
         $description2 = $_POST['description2'];
         if ($_FILES['image1']['name'] != null && $_FILES['image2']['name'] != null) {
-            $file1 = 'post_image/' . ($_FILES['image1']['name']);
-            $file2 = 'post_image/' . ($_FILES['image2']['name']);
+            $file1 = 'assets/images/post_image/' . ($_FILES['image1']['name']);
+            $file2 = 'assets/images/post_image/' . ($_FILES['image2']['name']);
             $imageType1 = pathinfo($file1, PATHINFO_EXTENSION);
             $imageType2 = pathinfo($file2, PATHINFO_EXTENSION);
 
@@ -76,7 +76,7 @@ if ($_POST) {
                 };
             };
         } else if ($_FILES['image1']['name'] != null && $_FILES['image2']['name'] == null) {
-            $file1 = 'post_image/' . ($_FILES['image1']['name']);
+            $file1 = 'assets/images/post_image/' . ($_FILES['image1']['name']);
             $imageType1 = pathinfo($file1, PATHINFO_EXTENSION);
 
             if (
@@ -95,7 +95,7 @@ if ($_POST) {
                 };
             };
         } else if ($_FILES['image1']['name'] == null && $_FILES['image2']['name'] != null) {
-            $file2 = 'post_image/' . ($_FILES['image2']['name']);
+            $file2 = 'assets/images/post_image/' . ($_FILES['image2']['name']);
             $imageType2 = pathinfo($file2, PATHINFO_EXTENSION);
 
             if (
@@ -207,7 +207,7 @@ if ($_POST) {
                             </div>
                             <div class="input-style-1">
                                 <label>Image1</label>
-                                <img src="post_image/<?php echo $result[0]['image1'] ?>" alt="" width="100" height="100"><br>
+                                <img src="assets/images/post_image/<?php echo $result[0]['image1'] ?>" alt="" width="100" height="100"><br>
                                 <input type="file" name="image1" />
                             </div>
                             <div class="input-style-1">
@@ -216,7 +216,7 @@ if ($_POST) {
                             </div>
                             <div class="input-style-1">
                                 <label>Image2</label>
-                                <img src="post_image/<?php echo $result[0]['image2'] ?>" alt="" width="100" height="100"><br>
+                                <img src="assets/images/post_image/<?php echo $result[0]['image2'] ?>" alt="" width="100" height="100"><br>
                                 <input type="file" name="image2" />
                             </div>
                             <div class="input-style-1" style="display:flex;justify-content:space-between">

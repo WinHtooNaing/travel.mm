@@ -74,8 +74,8 @@ $resulRegionId = $stmtRegionId->fetchAll();
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="image">
-                                    <img src="admin/post_image/<?php echo $result[0]['image1'] ?>" alt="" style="width: 80%;height:300px;object-fit:cover;margin-left:10%;border-radius: 20px;margin-bottom:20px">
-                                    <img src="admin/post_image/<?php echo $result[0]['image2'] ?>" alt="" style="width: 80%;height:300px;object-fit:cover;margin-left:10%;border-radius: 20px;">
+                                    <img src="admin/assets/images/post_image/<?php echo $result[0]['image1'] ?>" alt="" style="width: 80%;height:300px;object-fit:cover;margin-left:10%;border-radius: 20px;margin-bottom:20px">
+                                    <img src="admin/assets/images/post_image/<?php echo $result[0]['image2'] ?>" alt="" style="width: 80%;height:300px;object-fit:cover;margin-left:10%;border-radius: 20px;">
                                 </div>
                             </div>
                             <div class="col-lg-6">

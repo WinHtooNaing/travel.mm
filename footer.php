@@ -9,7 +9,7 @@
                 <p class="text-sm">
                   Designed and Developed by
                   <a href="https://github.com/WinHtooNaing" rel="nofollow" target="_blank">
-                    Win Htoo Naing
+                    travel.mm team
                   </a>
                 </p>
               </div>

@@ -206,7 +206,7 @@ if ($_POST) {
                             </div>
                             <div class="input-style-1">
                                 <label>Image1</label>
-                                <img src="admin/post_image/<?php echo $result[0]['image1'] ?>" alt="" width="100" height="100"><br>
+                                <img src="admin/assets/images/post_image/<?php echo $result[0]['image1'] ?>" alt="" width="100" height="100"><br>
                                 <input type="file" name="image1" />
                             </div>
                             <div class="input-style-1">
@@ -215,7 +215,7 @@ if ($_POST) {
                             </div>
                             <div class="input-style-1">
                                 <label>Image2</label>
-                                <img src="admin/post_image/<?php echo $result[0]['image2'] ?>" alt="" width="100" height="100"><br>
+                                <img src="admin/assets/images/post_image/<?php echo $result[0]['image2'] ?>" alt="" width="100" height="100"><br>
                                 <input type="file" name="image2" />
                             </div>
                             <div class="input-style-1" style="display:flex;justify-content:space-between">

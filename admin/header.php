@@ -133,6 +133,14 @@ $page = end($link_array);
           <hr />
         </span>
 
+        <li class="nav-item <?php echo $page == 'home.php' ? 'active' : '' ?>">
+          <a href="home.php">
+            <span class="icon">
+            <i class="lni lni-home"></i>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
         <li class="nav-item <?php echo $page == 'about.php' ? 'active' : '' ?>">
           <a href="about.php">
             <span class="icon">
@@ -258,7 +266,7 @@ $page = end($link_array);
                   <div class="profile-info">
                     <div class="info">
                       <div class="image">
-                        <img src="../user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height: 100%;object-fit:cover" />
+                        <img src="assets/images/user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height: 100%;object-fit:cover" />
                       </div>
                       <div>
                         <h6 class="fw-500"><?php echo $_SESSION['username'] ?></h6>
@@ -271,7 +279,7 @@ $page = end($link_array);
                   <li>
                     <div class="author-info flex items-center !p-1">
                       <div class="image">
-                        <img src="../user_image/<?php echo $_SESSION['image'] ?>" alt="image">
+                        <img src="assets/images/user_image/<?php echo $_SESSION['image'] ?>" alt="image">
                       </div>
                       <div class="content">
                         <h4 class="text-sm"><?php echo $_SESSION['username'] ?></h4>

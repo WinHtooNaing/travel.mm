@@ -42,6 +42,11 @@ posts table ==>
                 image2 - text
                 created_at - timestamp - default current timestamp
 
+home table ==>
+                id - int(11) - primary
+                image - text
+                created_at -timestamp - default current timestamp                
+
                 
 
 

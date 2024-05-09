@@ -49,7 +49,7 @@
                     <div class="profile-info">
                         <div class="d-flex align-items-center mb-30">
                             <div class="profile-image">
-                                <img src="user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height:100%;object-fit:cover" />
+                                <img src="admin/assets/images/user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height:100%;object-fit:cover" />
                                 <div class="update-image">
                                     <input type="file" />
                                     <label for=""><i class="lni lni-cloud-upload"></i></label>

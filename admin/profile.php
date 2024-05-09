@@ -42,7 +42,7 @@ include 'header.php'
                     <div class="profile-info">
                         <div class="d-flex align-items-center mb-30">
                             <div class="profile-image">
-                                <img src="../user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height:100%;object-fit:cover" />
+                                <img src="assets/images/user_image/<?php echo $_SESSION['image'] ?>" alt="" style="height:100%;object-fit:cover" />
                                 <div class="update-image">
                                     <input type="file" />
                                     <label for=""><i class="lni lni-cloud-upload"></i></label>
@@ -98,7 +98,7 @@ include 'header.php'
                     $email = $_POST['email'];
                     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                    $file = '../user_image/' . ($_FILES['image']['name']);
+                    $file = 'assets/images/user_image/' . ($_FILES['image']['name']);
                     $imageType = pathinfo($file, PATHINFO_EXTENSION);
 
                     if ($imageType != 'png' && $imageType != 'jpg' && $imageType != 'jpeg') {
